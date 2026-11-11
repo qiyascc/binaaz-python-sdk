@@ -1,0 +1,62 @@
+settings:
+  description: Settings for the bina.az client. Values come from code, BINAAZ_* environment variables or a config file.
+  cookie: Signed in bina.az session, as a Cookie header value. Empty until you sign in or pass one
+  base_url: bina.az address. The GraphQL endpoint lives under it
+  photos_url: Photo service address
+  login_url: Address of the SMS login service bina.az uses
+  return_to: Page the SMS login service is told to return to
+  endpoints: Path of every call, relative to its service address
+  language: Language sent to the SMS login service
+  timeout: Seconds to wait for an answer
+  connect_timeout: Seconds to wait for a connection
+  max_retries: Extra attempts for calls that are safe to repeat
+  code_attempts: Attempts for an SMS login call whose answer has no known error, the login service drops some answers
+  backoff_base: First wait between retries, in seconds
+  backoff_cap: Longest wait between retries, in seconds
+  user_agent: User-Agent header
+  allow_insecure_http: Allow plain http addresses outside localhost, for a test server on a private network only
+
+value:
+  empty: "{field} cannot be empty"
+  too_long: "{field} is longer than {limit} characters"
+  range: "{field} must be a whole number from {low} to {high}, got {value!r}"
+  choice: "{field} must be one of {choices}, got {value!r}"
+  phone: "{value!r} is not an Azerbaijani mobile number such as 050 123 45 67"
+  id: "{field} must be a bina.az id, got {value!r}"
+  photos: "bina.az takes {low} to {high} photos on a listing, got {count}"
+  photo_file: "photo must be bytes, a file object or a path, got {value!r}"
+  confirm: "{action} costs money. Pass confirm=True to go ahead"
+  cookie: Cookie is empty or not in a known format
+
+error:
+  base_url: "{field} must be an absolute http or https address, got {url}"
+  insecure: "Refusing to send a session over plain http to {url}. Use https, or set allow_insecure_http for a private test server."
+  connect: "Could not reach {host}, nothing was sent: {error}"
+  timeout: "{host} did not answer: {error}"
+  unknown_outcome: "{action} may or may not have gone through ({reason}). Check the account before trying again."
+  body: "{host} sent an answer that is not JSON: {body}"
+  status: "{host} answered with HTTP {status}"
+  blocked: "{host} answered with a Cloudflare challenge page. This client does not solve challenges; the site has to let your address through."
+  session: bina.az did not accept the session. Sign in again
+  no_profile: bina.az returned no profile, the session is not signed in
+  no_cookie: bina.az accepted the sign in but set no session cookie
+  login: "bina.az did not accept the sign in: {detail}"
+  graphql: "bina.az refused the request: {detail}"
+  validation: "bina.az rejected the listing: {detail}"
+  not_company: "Listing management needs a bina.az company profile, this session is a {kind}"
+  not_found: "bina.az item {item_id} was not found for this account"
+  photo_id: bina.az did not return a photo id
+  photo_size: The photo is too large for bina.az
+  code_service: "The SMS login service did not answer after {attempts} attempts ({last}). Try again in a moment."
+  code_limit: "Too many SMS codes or wrong codes for this number. Wait before asking again: {detail}"
+  code_phone: "The SMS login service refused the number: {detail}"
+  code_rejected: "The code was not accepted: {detail}"
+  code_reused: "The code was not accepted: {detail}. It may have been used by an earlier attempt, ask for a new one."
+  no_token: The SMS login service returned no access token
+  status_restricted: bina.az wants the account's phone number confirmed before posting
+  status_unverified: The bina.az account is not verified yet
+  status_invalid: bina.az rejected the listing data
+  status_failure: bina.az could not create the listing
+  status_locked: "The listing is locked on bina.az, for example under moderation{until}"
+  status_forbidden: This bina.az account can not edit the listing
+  status_not_found: The listing was not found on bina.az

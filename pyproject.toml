@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "binaaz-python-sdk"
+dynamic = ["version"]
+description = "Typed Python client for bina.az: sign in by email or SMS code, post, edit, prolong and delete real estate listings, upload photos, read the catalog. Sync and async."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "qiyascc", email = "qiyasturk@gmail.com" }]
+keywords = ["bina.az", "real estate", "azerbaijan", "listings", "graphql", "sdk", "api"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business",
+    "Typing :: Typed",
+]
+dependencies = ["httpx>=0.24,<1", "goodconf>=7.1", "pydantic>=2.7", "PyYAML>=6"]
+
+[project.optional-dependencies]
+toml = ["goodconf[toml]>=7.1"]
+yaml = ["goodconf[yaml]>=7.1"]
+dev = ["binaaz-python-sdk[toml,yaml]", "pytest>=7", "pytest-asyncio>=0.21", "ruff>=0.4", "mypy>=1.8", "types-PyYAML"]
+
+[project.urls]
+Homepage = "https://github.com/qiyascc/binaaz-python-sdk"
+Issues = "https://github.com/qiyascc/binaaz-python-sdk/issues"
+Changelog = "https://github.com/qiyascc/binaaz-python-sdk/blob/main/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/binaaz_sdk/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/binaaz_sdk"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/binaaz_sdk", "tests", "examples", "README.md", "CHANGELOG.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E731", "UP006", "UP007", "UP035", "UP045"]
+
+[tool.mypy]
+python_version = "3.10"
+plugins = ["pydantic.mypy"]
+warn_unused_ignores = true

@@ -1,0 +1,4 @@
+timeout = 30
+max_retries = 2
+code_attempts = 3
+user_agent = "my-agency-crm/1.0 binaaz-python-sdk/{version}"
