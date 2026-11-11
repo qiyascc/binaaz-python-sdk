@@ -5,12 +5,12 @@
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
 [![Async](https://img.shields.io/badge/sync%20%2B%20async-httpx-5A45FF)](https://www.python-httpx.org)
 [![Ruff](https://img.shields.io/badge/lint-ruff-D7FF64?logo=ruff&logoColor=black)](https://docs.astral.sh/ruff)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/qiyascc/binaaz-python-sdk/blob/main/LICENSE)
 
 Typed Python client for bina.az, the Azerbaijani real estate site. Sign in with email and password or with an SMS code, post, edit, prolong and delete listings, upload and rotate photos, read the catalog of cities, districts and metro stations. Sync and async, with retry rules built so a listing or a payment is never sent twice.
 
 ```bash
-pip install git+https://github.com/qiyascc/binaaz-python-sdk.git
+pip install binaaz-python-sdk
 ```
 
 This is not an official bina.az product. It talks to the same endpoints the bina.az website uses, with its own User-Agent. It does not solve captchas or Cloudflare challenges: if bina.az answers with a challenge page you get `BlockedError`.
@@ -143,12 +143,21 @@ Uploads take bytes, a path or a file object. Rotating returns a new photo id; us
 
 ## Config
 
-Pass values in code, or set `BINAAZ_COOKIE`, `BINAAZ_TIMEOUT`, `BINAAZ_MAX_RETRIES`, `BINAAZ_CODE_ATTEMPTS`, `BINAAZ_USER_AGENT` and the rest, or put them in `binaaz.toml` ([example](examples/binaaz.toml)). Every path is a setting (`BINAAZ_ENDPOINTS__GRAPHQL=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`.
+Pass values in code, or set `BINAAZ_COOKIE`, `BINAAZ_TIMEOUT`, `BINAAZ_MAX_RETRIES`, `BINAAZ_CODE_ATTEMPTS`, `BINAAZ_USER_AGENT` and the rest, or put them in `binaaz.toml` ([example](https://github.com/qiyascc/binaaz-python-sdk/blob/main/examples/binaaz.toml)). Every path is a setting (`BINAAZ_ENDPOINTS__GRAPHQL=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`.
 
 ## Develop
 
 ```bash
 pip install -e ".[dev]" && pytest && ruff check . && mypy src
 ```
+
+## Links
+
+- Source code: [github.com/qiyascc/binaaz-python-sdk](https://github.com/qiyascc/binaaz-python-sdk)
+- PyPI: [pypi.org/project/binaaz-python-sdk](https://pypi.org/project/binaaz-python-sdk/)
+- Project page: [theqiyas.cc/projects/binaaz-sdk](https://theqiyas.cc/projects/binaaz-sdk/)
+- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+
+## License
 
 MIT

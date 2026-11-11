@@ -32,7 +32,9 @@ yaml = ["goodconf[yaml]>=7.1"]
 dev = ["binaaz-python-sdk[toml,yaml]", "pytest>=7", "pytest-asyncio>=0.21", "ruff>=0.4", "mypy>=1.8", "types-PyYAML"]
 
 [project.urls]
-Homepage = "https://github.com/qiyascc/binaaz-python-sdk"
+Homepage = "https://theqiyas.cc/projects/binaaz-sdk/"
+Source = "https://github.com/qiyascc/binaaz-python-sdk"
+Author = "https://theqiyas.cc"
 Issues = "https://github.com/qiyascc/binaaz-python-sdk/issues"
 Changelog = "https://github.com/qiyascc/binaaz-python-sdk/blob/main/CHANGELOG.md"
 
