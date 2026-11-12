@@ -1,5 +1,6 @@
 # binaaz-python-sdk
 
+[![PyPI](https://img.shields.io/pypi/v/binaaz-python-sdk?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/binaaz-python-sdk/)
 [![Python](https://img.shields.io/badge/python-3.10%20to%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![bina.az](https://img.shields.io/badge/site-bina.az-E4402F)](https://bina.az)
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
