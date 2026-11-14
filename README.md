@@ -1,6 +1,7 @@
 # binaaz-python-sdk
 
 [![PyPI](https://img.shields.io/pypi/v/binaaz-python-sdk?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/binaaz-python-sdk/)
+[![Docs](https://readthedocs.org/projects/binaaz-python-sdk/badge/?version=latest)](https://binaaz-python-sdk.readthedocs.io/en/latest/)
 [![Python](https://img.shields.io/badge/python-3.10%20to%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![bina.az](https://img.shields.io/badge/site-bina.az-E4402F)](https://bina.az)
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
@@ -154,6 +155,7 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 
 ## Links
 
+- Documentation: [binaaz-python-sdk.readthedocs.io](https://binaaz-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/binaaz-python-sdk](https://github.com/qiyascc/binaaz-python-sdk)
 - PyPI: [pypi.org/project/binaaz-python-sdk](https://pypi.org/project/binaaz-python-sdk/)
 - Project page: [theqiyas.cc/projects/binaaz-sdk](https://theqiyas.cc/projects/binaaz-sdk/)
