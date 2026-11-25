@@ -4,10 +4,10 @@ bina.az Python SDK is a typed client for bina.az, the Azerbaijani real estate si
 
 ## Author
 
-The SDK is written and maintained by **Qiyas Sadıqov**. More of his work, including the other libraries listed below, is on [theqiyas.cc](https://theqiyas.cc).
+The SDK is written and maintained by **Qiyas Sadıqov**. More of his work, including the other libraries listed below, is on [qiyas.cc](https://qiyas.cc).
 
-- Website: [theqiyas.cc](https://theqiyas.cc)
-- Project page: [theqiyas.cc/projects/binaaz-sdk](https://theqiyas.cc/projects/binaaz-sdk/)
+- Website: [qiyas.cc](https://qiyas.cc)
+- Project page: [qiyas.cc/projects/binaaz-sdk](https://qiyas.cc/projects/binaaz-sdk/)
 - GitHub: [github.com/qiyascc](https://github.com/qiyascc)
 
 ## Links

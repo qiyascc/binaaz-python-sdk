@@ -158,8 +158,8 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 - Documentation: [binaaz-python-sdk.readthedocs.io](https://binaaz-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/binaaz-python-sdk](https://github.com/qiyascc/binaaz-python-sdk)
 - PyPI: [pypi.org/project/binaaz-python-sdk](https://pypi.org/project/binaaz-python-sdk/)
-- Project page: [theqiyas.cc/projects/binaaz-sdk](https://theqiyas.cc/projects/binaaz-sdk/)
-- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+- Project page: [qiyas.cc/projects/binaaz-sdk](https://qiyas.cc/projects/binaaz-sdk/)
+- Author: [Qiyas Sadıqov](https://qiyas.cc), more projects at [qiyas.cc](https://qiyas.cc)
 
 ## License
 
